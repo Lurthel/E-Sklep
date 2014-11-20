@@ -91,48 +91,63 @@ namespace E_Sklep
 
         protected void btnE_Sklep_Click(object sender, EventArgs e)
         {
-            GetMyCart();
-            lblCategoryName.Text = "Popularne Produkty w E-Sklepie";
-            lblProducts.Text = "Realizacja zamówienia";
-            pnlMyCart.Visible = true;
-            pnlCheckOut.Visible = true;
-            pnlCategories.Visible = false;
-            pnlProducts.Visible = false;
+            DataTable dt = (DataTable)Session["MyCart"];
+            if (dt != null)
+           
+            {
+             
+                GetMyCart();
+                lblCategoryName.Text = "Popularne Produkty w E-Sklepie";
+                lblProducts.Text = "Realizacja zamówienia";
+                pnlMyCart.Visible = true;
+                pnlCheckOut.Visible = true;
+                pnlCategories.Visible = false;
+                pnlProducts.Visible = false;
+            }
+
+            else
+            {
+            
+            }
         }
 
         private void GetMyCart()
         {
-            string productids = string.Empty;
             DataTable dt = (DataTable)Session["MyCart"];
-
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if (i == 0 || dt.Rows.Count == 1)
+            string productids = string.Empty;
+           
+        
+            
+       
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    productids = productids + dt.Rows[i]["ProductID"].ToString();
+                    if (i == 0 || dt.Rows.Count == 1)
+                    {
+                        productids = productids + dt.Rows[i]["ProductID"].ToString();
+                    }
+                    else
+                    {
+                        productids = productids + "," + dt.Rows[i]["ProductID"].ToString();
+                    }
+                }
+
+                productids = "(" + productids + ")";
+                if (dt.Rows.Count > 0)
+                {
+                    string query = "select * from Products where ProductID in" + productids + "";
+                    DataTable dtProducts = GetData(query);
+                    lblTotalProducts.Text = dtProducts.Rows.Count.ToString();
+                    dlCartProducts.DataSource = dtProducts;
+                    dlCartProducts.DataBind();
                 }
                 else
                 {
-                    productids = productids + "," + dt.Rows[i]["ProductID"].ToString();
+                    dlCartProducts.DataSource = null;
+                    dlCartProducts.DataBind();
+                    lblTotalProducts.Text = "0";
                 }
             }
-
-            productids = "("+productids+")";
-            if (dt.Rows.Count>0)
-            {
-                string query= "select * from Products where ProductID in" + productids+ "";
-                DataTable dtProducts= GetData(query);
-                lblTotalProducts.Text=dtProducts.Rows.Count.ToString();
-                dlCartProducts.DataSource=dtProducts;
-                dlCartProducts.DataBind();
-            }
-            else
-            {
-                dlCartProducts.DataSource=null;
-                dlCartProducts.DataBind();
-                lblTotalProducts.Text="0";
-            }
-        }
+        
 
         public DataTable GetData(string query)
         {
@@ -153,7 +168,7 @@ namespace E_Sklep
         protected void btnRemoveFromCart_Click(object sender, EventArgs e)
         {
             string productID = Convert.ToInt16((((Button)sender).CommandArgument)).ToString();
-
+            int ilosc;
             if (Session["MyCart"] != null)
             {
                 DataTable dt = (DataTable)Session["MyCart"];
@@ -162,10 +177,13 @@ namespace E_Sklep
 
                 if (drr != null)
                     dt.Rows.Remove(drr);
-
+               
                 Session["MyCart"] = dt;
+                btnE_Sklep.Text = dt.Rows.Count.ToString();   
             }
+           
             GetMyCart();
+            
         }
 
         protected void zamowButton_Click(object sender, EventArgs e)
@@ -212,6 +230,27 @@ namespace E_Sklep
             imienazwtb.Text = string.Empty;
             adrtb.Text = string.Empty;
             teltb.Text = string.Empty;
+        }
+
+        protected void btnE_Sklep_Click(object sender, ImageClickEventArgs e)
+        {
+            DataTable dt = (DataTable)Session["MyCart"];
+            if (dt != null)
+            {
+
+                GetMyCart();
+                lblCategoryName.Text = "Popularne Produkty w E-Sklepie";
+                lblProducts.Text = "Realizacja zamówienia";
+                pnlMyCart.Visible = true;
+                pnlCheckOut.Visible = true;
+                pnlCategories.Visible = false;
+                pnlProducts.Visible = false;
+            }
+
+            
+
+
+
         }
     }
 }

@@ -54,6 +54,7 @@
                             </tr>
                             <tr>
                                 <td class="style3" valign="middle">
+                                    <asp:Label ID="errorlbl" runat="server"></asp:Label>
                                     &nbsp;
                                 </td>
                             </tr>

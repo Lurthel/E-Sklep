@@ -85,6 +85,15 @@ namespace E_Sklep {
         protected global::System.Web.UI.WebControls.LinkButton btnE_Sklep;
         
         /// <summary>
+        /// errorlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorlbl;
+        
+        /// <summary>
         /// lblCategoryName control.
         /// </summary>
         /// <remarks>
