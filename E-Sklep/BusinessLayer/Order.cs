@@ -26,5 +26,12 @@ namespace E_Sklep.BusinessLayer
             DataTable dt = DataLayer.DataAccess.ExecuteDTByProcedure("NoweZamowienie", parameters);
         }
 
+        public DataTable GetZamowienia()
+        {
+            SqlParameter[] parameters = new SqlParameter[0];
+            DataTable dt = DataLayer.DataAccess.ExecuteDTByProcedure("SP_GetAllZamowienia", parameters);
+            return dt;
+        }
+
     }
 }
