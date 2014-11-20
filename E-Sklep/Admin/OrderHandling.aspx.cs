@@ -50,9 +50,21 @@ namespace E_Sklep.Admin
             
         }
 
-        private void Zrealizuj()
-        { 
         
+
+        protected void realbtn_Click(object sender, EventArgs e)
+        {
+            string a;
+            if (realtb.Text == "") { }
+            else
+            {
+                a = realtb.Text;
+                string sql = "DELETE FROM Zamowienia WHERE ZamowienieID ="+a;
+                SqlConnection connection = new SqlConnection(ConnectionString);
+                SqlDataAdapter dataadapter = new SqlDataAdapter(sql, connection);
+               
+            }
+            Response.Redirect(Request.RawUrl, true);
         }
 
        

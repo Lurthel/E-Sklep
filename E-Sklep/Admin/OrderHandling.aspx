@@ -10,11 +10,17 @@
         <tr><td style="width: 440px">
 
             <asp:GridView ID="zamgv" runat="server">
-                <Columns>
-                    <asp:ButtonField ButtonType="Button" CommandName="Zrealizuj();" Text="Zrealizowane" />
-                </Columns>
             </asp:GridView>
-            </td></tr>
+            </td>
+            <td>
+                <table>
+                    <tr><td><asp:Label ID="reallbl" runat="server" Text="Id zamówienia zrealizowanego"></asp:Label></td></tr>
+                    <tr><td><asp:TextBox ID="realtb" runat="server" Width="100%"></asp:TextBox></td></tr>
+                    <tr><td><asp:Button ID="realbtn" runat="server" text="Zrealizuj" OnClick="realbtn_Click" /></td></tr>
+                
+                 </table>
+            </td>
+        </tr>
         </table>
 
 </asp:Content>
