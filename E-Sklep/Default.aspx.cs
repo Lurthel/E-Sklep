@@ -16,6 +16,7 @@ namespace E_Sklep
 {
     public partial class Default : System.Web.UI.Page
     {
+        int ilosc_produktow;
         protected void Page_Load(object sender, EventArgs e)
         {
             lblCategoryName.Text = " Popularne Produkty w E-Sklepie";
@@ -58,6 +59,7 @@ namespace E_Sklep
                 dt.Rows.Add(ProductID);
                 Session["MyCart"] = dt;
                 btnE_Sklep.Text = dt.Rows.Count.ToString();
+                ilosc_produktow = Convert.ToInt32(btnE_Sklep.Text);
             }
             else 
             {
@@ -136,7 +138,7 @@ namespace E_Sklep
                 {
                     string query = "select * from Products where ProductID in" + productids + "";
                     DataTable dtProducts = GetData(query);
-                    lblTotalProducts.Text = dtProducts.Rows.Count.ToString();
+                    lblTotalProducts.Text = btnE_Sklep.Text;
                     dlCartProducts.DataSource = dtProducts;
                     dlCartProducts.DataBind();
                 }

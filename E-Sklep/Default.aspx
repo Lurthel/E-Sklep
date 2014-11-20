@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
- <link rel="stylesheet" type="text/css" href="Styles.css" />   
+ 
+   
     <style type="text/css">
         .auto-style2 {
             width: 121px;
@@ -17,16 +18,20 @@
     </style>
 </head>
 <body>
-    
+        
     <form id="form1" runat="server">
+
+    <link href ="Admin/Styles.css" rel="stylesheet" text="text/css"
 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     
     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+        
         <ContentTemplate>
             <table align="center" class="style1">
                 <tr>
                     <td>
                         <table align="center" class="style1" style="border-bottom-style: ridge;border-width:medium; 
-                           border-color:#9933FF">
+                           border-color:black">
                             <tr>
                                 <td class="style8" align="center" rowspan="2">
                                     <asp:Image ID="Image1" runat="server" Height="72px" ImageUrl="http://ftp.mgkrakow.pl/files/eSklep.gif" Width="72px" />
@@ -34,13 +39,13 @@
                                 </td>
                                 <td class="style6" rowspan="2">
                                     <asp:LinkButton ID="lblLogo" runat="server" Text="E-Sklep" Font-Names="Eras Demi ITC"
-                                        Font-Size="20pt" ForeColor="#6600CC" OnClick="lblLogo_Click"></asp:LinkButton>
+                                        Font-Size="20pt" ForeColor="black" OnClick="lblLogo_Click"></asp:LinkButton>
                                     <br />
                                     Dla tych co lubią Kupować!
                                 </td>
                                 <td class="style7" rowspan="2">
                                     <asp:Image ID="Image3" runat="server" Height="67px" ImageUrl="http://thecrystalinfotech.in/images/banner-laptop-sales.jpg"
-                                        Width="282px" />
+                                        Width="282px" BackColor="LightGreen" />
                                 </td>
                                 <td rowspan="2" align="right">
                                     <asp:ImageButton ID="Image2" runat="server" Height="70px" ImageUrl="http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/shopping-icon.png"
@@ -164,7 +169,7 @@
                                 <td class="style3" valign="top" align="center">
                                     <asp:Panel ID="pnlCategories" runat="server" ScrollBars="Auto" Height="600px" BorderColor="Black"
                                         BorderStyle="Inset" BorderWidth="1px">
-                                        <asp:DataList ID="dlCategories" runat="server" BackColor="White" BorderColor="#CCCCCC"
+                                        <asp:DataList ID="dlCategories" runat="server" BackColor="LightGreen" BorderColor="#CCCCCC"
                                             BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"
                                             Width="252px">
                                             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -191,21 +196,21 @@
                                             <tr><td>Dane do wysyłki:</td></tr>
                                             <tr>
                                                 <td><label id="imienazwlbl" runat="server">Imię i Nazwisko:</label></td>
-                                                <td><asp:TextBox ID="imienazwtb" runat="server" Width="100%"></asp:TextBox></td>
+                                                <td><asp:TextBox ID="imienazwtb" runat="server" Width="100%" BackColor ="Lightgreen"></asp:TextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><label id="adrlbl" runat="server">Adres:</label></td>
-                                                <td><asp:TextBox ID="adrtb" runat="server" Width="100%" Height="100px"></asp:TextBox></td>
+                                                <td><asp:TextBox ID="adrtb" runat="server" Width="100%" Height="100px" BackColor="LightGreen"></asp:TextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><label id="tellbl" runat="server">Nr Telefonu:</label></td>
-                                                <td><asp:TextBox ID="teltb" runat="server" Width="100%" ></asp:TextBox></td>
+                                                <td><asp:TextBox ID="teltb" runat="server" Width="100%" BackColor="LightGreen" ></asp:TextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><asp:Button ID="zamowButton" runat="server" Text="Zamów Produkty" OnClick="zamowButton_Click" /></td>
                                                 <td></td>
                                             </tr>
-                                            <tr><td><asp:Label ID="alertlbl" runat="server" ForeColor="Red"></asp:Label></td></tr>
+                                            <tr><td><asp:Label ID="alertlbl" runat="server" Strong ForeColor="Red"></asp:Label></td></tr>
                                         </table>
                                     </asp:Panel>
                                 </td>

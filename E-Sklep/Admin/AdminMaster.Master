@@ -9,10 +9,11 @@
 </head>
 <body>
     <form id="form2" runat="server">
+       
         <table align="center" style="width: 900px;">
             <tr>
                 <td>
-                    <table align="center" style="border-bottom-style: ridge; border-width:medium; width: 900px; border-color: #9933FF">
+                    <table align="center" style="border-bottom-style: ridge; border-width:medium; width: 900px; border-color: Red">
                        <tr> 
                            <td align="center">
                             <asp:Image runat="server" />
@@ -21,7 +22,7 @@
 
                         <td>
                             <asp:LinkButton ID="lblLogo" runat="server" Text="E-Sklep" Font-Names="Eras Demi ITC"
-                                Font-Size="20pt" ForeColor="#6600CC"></asp:LinkButton>
+                                Font-Size="20pt" ForeColor="Red"></asp:LinkButton>
                             <br />
                             Dla tych co lubia kupować!
                         </td>
@@ -34,7 +35,7 @@
             </tr>
             <tr>
                 <td>
-                    <table align="center" style="border: thin ridge #9900FF; width: 900px;">
+                    <table align="center" style="border: thin ridge Red; width: 900px;">
                         <tr>
                             <td class="style2">
                                 <a href="AddEditCategory.aspx">Kategorie</a>&nbsp;||&nbsp;<a href="AddNewProducts.aspx">Produkty</a>
@@ -45,7 +46,7 @@
             </tr>
             <tr>
                 <td>
-                    <table align="center" style="border: 1px ridge #000000;width:900px;">
+                    <table align="center" style="border: 1px ridge Red;width:900px;">
                         <tr>
                             <td class="style2" valing="top">
                                 <asp:Panel ID="pnlCategories" runat="server">
@@ -59,7 +60,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    &nbsp;&copy; Sebastian Pietrulewicz || <a href="../Default.aspx">Home</a>
+                    &nbsp;&copy; Sklep || <a href="../Default.aspx">Home</a>
                 
                 </td>
             </tr>

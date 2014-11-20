@@ -1,0 +1,37 @@
+﻿body {
+    background-color:lightgreen;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+        .style1 {
+        width:900px;
+        }
+        .style2 {
+        width:633px;
+        text-align:left;
+        }
+        .style3 {
+        width:257px;
+        text-align:center;
+        }
+        .style4 {
+        width:185px;
+        text-align:center;
+        }
+        .style6 {
+        width:260px;
+        text-align:left;
+        }
+        .style7 {
+        width:427px;
+        text-align:center;
+        }
+        .style8 {
+        width:108px;
+        text-align:center;
+        }
+        .auto-style1 {
+            width: 121px;
+        }
+   
