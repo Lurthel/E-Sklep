@@ -7,9 +7,9 @@
         <hr />
     </div>
     <table align="center" cellspacing="1" style="width: 100%; background-color: #FFFFFF;">
-        <tr><td style="width: 440px">
+        <tr><td style="width: 631px">
 
-            <asp:GridView ID="zamgv" runat="server">
+            <asp:GridView ID="zamgv" runat="server" Width="100%">
             </asp:GridView>
             </td>
             <td>

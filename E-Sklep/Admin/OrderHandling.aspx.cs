@@ -55,15 +55,16 @@ namespace E_Sklep.Admin
         protected void realbtn_Click(object sender, EventArgs e)
         {
             string a;
-            if (realtb.Text == "") { }
-            else
-            {
-                a = realtb.Text;
-                string sql = "DELETE FROM Zamowienia WHERE ZamowienieID ="+a;
-                SqlConnection connection = new SqlConnection(ConnectionString);
-                SqlDataAdapter dataadapter = new SqlDataAdapter(sql, connection);
-               
-            }
+            a = realtb.Text;
+            SqlConnection sqlConnection1 = new SqlConnection(ConnectionString);
+            SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.CommandText = "DELETE FROM Zamowienia WHERE ZamowienieID =" + a;
+            cmd.Connection = sqlConnection1;
+
+            sqlConnection1.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection1.Close();
             Response.Redirect(Request.RawUrl, true);
         }
 

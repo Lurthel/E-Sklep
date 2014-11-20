@@ -18,10 +18,10 @@
     </style>
 </head>
 <body>
-        
+        <link href ="Admin/Styles.css" rel="stylesheet" text="text/css" />
     <form id="form1" runat="server">
 
-    <link href ="Admin/Styles.css" rel="stylesheet" text="text/css"
+    
 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
      
     <asp:UpdatePanel ID="UpdatePanel3" runat="server">
@@ -45,7 +45,7 @@
                                 </td>
                                 <td class="style7" rowspan="2">
                                     <asp:Image ID="Image3" runat="server" Height="67px" ImageUrl="http://thecrystalinfotech.in/images/banner-laptop-sales.jpg"
-                                        Width="282px" BackColor="LightGreen" />
+                                        Width="282px" BackColor="LightGray" />
                                 </td>
                                 <td rowspan="2" align="right">
                                     <asp:ImageButton ID="Image2" runat="server" Height="70px" ImageUrl="http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/shopping-icon.png"
@@ -169,7 +169,7 @@
                                 <td class="style3" valign="top" align="center">
                                     <asp:Panel ID="pnlCategories" runat="server" ScrollBars="Auto" Height="600px" BorderColor="Black"
                                         BorderStyle="Inset" BorderWidth="1px">
-                                        <asp:DataList ID="dlCategories" runat="server" BackColor="LightGreen" BorderColor="#CCCCCC"
+                                        <asp:DataList ID="dlCategories" runat="server" BackColor="LightGray" BorderColor="#CCCCCC"
                                             BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal"
                                             Width="252px">
                                             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
@@ -196,21 +196,21 @@
                                             <tr><td>Dane do wysyłki:</td></tr>
                                             <tr>
                                                 <td><label id="imienazwlbl" runat="server">Imię i Nazwisko:</label></td>
-                                                <td><asp:TextBox ID="imienazwtb" runat="server" Width="100%" BackColor ="Lightgreen"></asp:TextBox></td>
+                                                <td><asp:TextBox ID="imienazwtb" runat="server" Width="100%" BackColor ="Lightgray"></asp:TextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><label id="adrlbl" runat="server">Adres:</label></td>
-                                                <td><asp:TextBox ID="adrtb" runat="server" Width="100%" Height="100px" BackColor="LightGreen"></asp:TextBox></td>
+                                                <td><asp:TextBox ID="adrtb" runat="server" Width="100%" Height="100px" BackColor="LightGray"></asp:TextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><label id="tellbl" runat="server">Nr Telefonu:</label></td>
-                                                <td><asp:TextBox ID="teltb" runat="server" Width="100%" BackColor="LightGreen" ></asp:TextBox></td>
+                                                <td><asp:TextBox ID="teltb" runat="server" Width="100%" BackColor="LightGray" ></asp:TextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><asp:Button ID="zamowButton" runat="server" Text="Zamów Produkty" OnClick="zamowButton_Click" /></td>
                                                 <td></td>
                                             </tr>
-                                            <tr><td><asp:Label ID="alertlbl" runat="server" Strong ForeColor="Red"></asp:Label></td></tr>
+                                            <tr><td><asp:Label ID="alertlbl" runat="server"  ForeColor="Red"></asp:Label></td></tr>
                                         </table>
                                     </asp:Panel>
                                 </td>

@@ -43,6 +43,14 @@ namespace E_Sklep.BusinessLayer
             return dt;
         }
 
+        public DataTable GetAllProducts2()
+        {
+            SqlParameter[] parameters = new SqlParameter[1];
+            parameters[0] = DataLayer.DataAccess.AddParameter("@CategoryID", CategoryID, System.Data.SqlDbType.Int, 100);
+            DataTable dt = DataLayer.DataAccess.ExecuteDTByProcedure("SP_GetAllProducts2", parameters);
+            return dt;
+        }
+
         public DataTable GetAllProducts()
         {
             SqlParameter[] parameters = new SqlParameter[0];

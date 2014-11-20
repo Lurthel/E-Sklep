@@ -36,18 +36,31 @@ namespace E_Sklep
             dlCategories.DataBind();
         }
 
+        private void GetProducts2(int CategoryID)
+        {
+            ShoppingCart k = new ShoppingCart()
+            {
+                CategoryID = CategoryID
+            };
+
+            dlProducts.DataSource = null;
+            dlProducts.DataSource = k.GetAllProducts2();
+            dlProducts.DataBind();
+
+
+        }
         private void GetProducts(int CategoryID)
         {
             ShoppingCart k = new ShoppingCart()
             {
-               CategoryID = CategoryID
+                CategoryID = CategoryID
             };
 
             dlProducts.DataSource = null;
             dlProducts.DataSource = k.GetAllProducts();
             dlProducts.DataBind();
 
-          
+
         }
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
@@ -75,8 +88,8 @@ namespace E_Sklep
         {
             pnlMyCart.Visible = false;
             pnlProducts.Visible = true;
-            int CategoryID = Convert.ToInt16((((LinkButton)sender).CommandArgument));
-            GetProducts(CategoryID);
+            int CategoryID = Convert.ToInt32((((LinkButton)sender).CommandArgument));
+            GetProducts2(CategoryID);
         }
 
         protected void lblLogo_Click(object sender, EventArgs e)
@@ -170,7 +183,7 @@ namespace E_Sklep
         protected void btnRemoveFromCart_Click(object sender, EventArgs e)
         {
             string productID = Convert.ToInt16((((Button)sender).CommandArgument)).ToString();
-            int ilosc;
+            
             if (Session["MyCart"] != null)
             {
                 DataTable dt = (DataTable)Session["MyCart"];
@@ -193,7 +206,7 @@ namespace E_Sklep
            
                 if (imienazwtb.Text == "" || adrtb.Text == "" || teltb.Text == "" )
                 {
-                    alertlbl.Text = "Błą danych";
+                    alertlbl.Text = "Błednie wypełniony formularz";
                 }
                 else
                 {
