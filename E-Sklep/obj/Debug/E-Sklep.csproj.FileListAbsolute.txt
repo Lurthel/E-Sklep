@@ -1,0 +1,12 @@
+C:\Users\Sebastian\documents\visual studio 2013\Projects\E-Sklep\E-Sklep\bin\E-Sklep.dll.config
+C:\Users\Sebastian\documents\visual studio 2013\Projects\E-Sklep\E-Sklep\bin\E-Sklep.dll
+C:\Users\Sebastian\documents\visual studio 2013\Projects\E-Sklep\E-Sklep\bin\E-Sklep.pdb
+C:\Users\Sebastian\documents\visual studio 2013\Projects\E-Sklep\E-Sklep\obj\Debug\E-Sklep.csprojResolveAssemblyReference.cache
+C:\Users\Sebastian\documents\visual studio 2013\Projects\E-Sklep\E-Sklep\obj\Debug\E-Sklep.dll
+C:\Users\Sebastian\documents\visual studio 2013\Projects\E-Sklep\E-Sklep\obj\Debug\E-Sklep.pdb
+C:\Users\Samsung\Desktop\Sklep-master123124\Sklep-master\E-Sklep\bin\E-Sklep.dll.config
+C:\Users\Samsung\Desktop\Sklep-master123124\Sklep-master\E-Sklep\bin\E-Sklep.dll
+C:\Users\Samsung\Desktop\Sklep-master123124\Sklep-master\E-Sklep\bin\E-Sklep.pdb
+C:\Users\Samsung\Desktop\Sklep-master123124\Sklep-master\E-Sklep\obj\Debug\E-Sklep.csprojResolveAssemblyReference.cache
+C:\Users\Samsung\Desktop\Sklep-master123124\Sklep-master\E-Sklep\obj\Debug\E-Sklep.dll
+C:\Users\Samsung\Desktop\Sklep-master123124\Sklep-master\E-Sklep\obj\Debug\E-Sklep.pdb
