@@ -66,6 +66,7 @@
     </Content>
     <Content Include="Default.aspx" />
     <Content Include="Admin\Styles.css" />
+    <Content Include="Admin\OrderHandling.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OrderHandling.aspx.cs">
+      <DependentUpon>OrderHandling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OrderHandling.aspx.designer.cs">
+      <DependentUpon>OrderHandling.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
